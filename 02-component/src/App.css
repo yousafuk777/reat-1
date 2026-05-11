@@ -94,20 +94,21 @@ body {
   padding-top: 15px;
 }
 
-.bottom button{
-  background-color: rgb(18, 18, 18);
+.bottom button {
+  background-color: #111;
   color: white;
-  padding: 7px 16px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 12px;
-  column-width: 600;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.bottom h3{
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 4px;
+.bottom h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 .bottom p{
   font-size: 10px;
