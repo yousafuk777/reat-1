@@ -1,6 +1,9 @@
 import { CiBookmark } from "react-icons/ci";
-import React from 'react'
+import React, { useState } from 'react'
+import ApplyForm from './ApplyForm';
+
 const Card = (props) => {
+    const [showForm, setShowForm] = useState(false);
 
     return (
         <div className="card">
@@ -23,8 +26,16 @@ const Card = (props) => {
                     <h3>{props.pay}</h3>
                     <p>{props.location}</p>
                 </div>
-                <button>Apply Now</button>
+                <button onClick={() => setShowForm(true)}>Apply Now</button>
             </div>
+            {showForm && (
+                <div className="modal-overlay" onClick={() => setShowForm(false)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="close-btn" onClick={() => setShowForm(false)}>✕</button>
+                        <ApplyForm />
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
