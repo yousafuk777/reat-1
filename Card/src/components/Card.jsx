@@ -32,7 +32,7 @@ const Card = (props) => {
                 <div className="modal-overlay" onClick={() => setShowForm(false)}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button className="close-btn" onClick={() => setShowForm(false)}>✕</button>
-                        <ApplyForm />
+                        <ApplyForm post={props.post} company={props.company} />
                     </div>
                 </div>
             )}

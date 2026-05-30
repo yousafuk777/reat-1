@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ApplyForm = () => {
+const ApplyForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Application Submitted!");
@@ -10,7 +10,7 @@ const ApplyForm = () => {
     <div className="form-container">
       <form className="apply-form" onSubmit={handleSubmit}>
         <h2>Apply for Position</h2>
-        <p className="subtitle">Frontend Engineer - Meta</p>
+        <h5>{props.post}  {props.company}</h5>
         
         <div className="input-group">
           <label>Full Name</label>
